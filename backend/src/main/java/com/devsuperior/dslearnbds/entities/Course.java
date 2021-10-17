@@ -10,22 +10,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_role")
-public class Role implements Serializable{
+@Table(name = "tb_course")
+public class Course implements Serializable{
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String authority;
+	private String name;
+	private String imgUri;
+	private String imgGrayUri;
 	
-	public Role() {
+	public Course() {
 	}
 
-	public Role(Long id, String authority) {
+	public Course(Long id, String name, String imgUri, String imgGrayUri) {
 		super();
 		this.id = id;
-		this.authority = authority;
+		this.name = name;
+		this.imgUri = imgUri;
+		this.imgGrayUri = imgGrayUri;
 	}
 
 	public Long getId() {
@@ -36,12 +40,28 @@ public class Role implements Serializable{
 		this.id = id;
 	}
 
-	public String getAuthority() {
-		return authority;
+	public String getName() {
+		return name;
 	}
 
-	public void setAuthority(String authority) {
-		this.authority = authority;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getImgUri() {
+		return imgUri;
+	}
+
+	public void setImgUri(String imgUri) {
+		this.imgUri = imgUri;
+	}
+
+	public String getImgGrayUri() {
+		return imgGrayUri;
+	}
+
+	public void setImgGrayUri(String imgGrayUri) {
+		this.imgGrayUri = imgGrayUri;
 	}
 
 	@Override
@@ -57,8 +77,9 @@ public class Role implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Role other = (Role) obj;
+		Course other = (Course) obj;
 		return Objects.equals(id, other.id);
 	}
+	
 	
 }
