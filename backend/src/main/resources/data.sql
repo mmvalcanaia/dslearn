@@ -48,3 +48,14 @@ INSERT INTO tb_task (id, description, question_Count, aproval_Count, weight, due
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
 
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_Count, lesson_id, user_id, offer_id) VALUES ('https://www.youtube.com/watch?v=QekeJBShCy4', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 0, null, null, 4, 1, 1);
+
+INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUES ('Titulo topico 1', 'Texto do topico 1', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 1, 1, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUES ('Titulo topico 2', 'Texto do topico 2', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 2, 1, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUES ('Titulo topico 3', 'Texto do topico 3', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 2, 2, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUES ('Titulo topico 4', 'Texto do topico 4', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 1, 2, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUES ('Titulo topico 5', 'Texto do topico 5', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 1, 3, 1);
+
+INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (1, 1);
+INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (2, 1);
+

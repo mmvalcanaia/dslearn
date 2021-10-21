@@ -32,8 +32,6 @@ public class Section implements Serializable {
 	@JoinColumn(name = "prerequisite_id")
 	private Section prerequite;
 	
-	
-	
 	public Section() {
 	}
 

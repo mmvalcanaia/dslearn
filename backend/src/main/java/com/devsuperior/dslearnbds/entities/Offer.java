@@ -3,8 +3,10 @@ package com.devsuperior.dslearnbds.entities;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -38,6 +40,10 @@ public class Offer implements Serializable{
 	
 	@OneToMany(mappedBy = "offer")
 	private List<Resource> resources = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "offer")
+	private Set<Topic> topics = new HashSet<>();
+	
 	
 	public Offer() {
 	}
