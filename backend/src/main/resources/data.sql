@@ -56,6 +56,11 @@ INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUE
 INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUES ('Titulo topico 4', 'Texto do topico 4', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 1, 2, 1);
 INSERT INTO tb_topic (title, body, moment, author_id, lesson_id, offer_id) VALUES ('Titulo topico 5', 'Texto do topico 5', TIMESTAMP WITH TIME ZONE '2021-11-25T13:00:00Z', 1, 3, 1);
 
-INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (1, 1);
+INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (1, 2);
 INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (2, 1);
+
+INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Tente reiniciar o computador', TIMESTAMP WITH TIME ZONE '2021-11-25T15:00:00Z', 1, 1);
+INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Funcionou aqui', TIMESTAMP WITH TIME ZONE '2021-11-25T15:00:00Z', 1, 2);
+
+INSERT INTO tb_reply_likes(reply_id, user_id) VALUES (1, 2);
 
