@@ -54,8 +54,8 @@ public class Topic implements Serializable{
 	
 	@ManyToMany
 	@JoinTable(name = "tb_topic_likes",
-	joinColumns = @JoinColumn(name = "topic_id"),
-	inverseJoinColumns = @JoinColumn(name = "user_id"))
+		joinColumns = @JoinColumn(name = "topic_id"),
+		inverseJoinColumns = @JoinColumn(name = "user_id"))
 	private Set<User> likes = new HashSet<>();
 	
 	@OneToMany(mappedBy = "topic")
