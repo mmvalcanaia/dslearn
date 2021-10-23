@@ -1,4 +1,4 @@
-package com.devsuperior.dslearnbds.controller;
+package com.devsuperior.dslearnbds.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
