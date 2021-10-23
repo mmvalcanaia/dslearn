@@ -12,7 +12,7 @@ import com.devsuperior.dslearnbds.services.UserService;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserController {
+public class UserResource {
 	
 	@Autowired
 	private UserService service;
